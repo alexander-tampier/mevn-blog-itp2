@@ -1,0 +1,6 @@
+[submodule "node-blog-itp2"]
+	path = node-blog-itp2
+	url = https://github.com/alexander-tampier/node-blog-itp2.git
+[submodule "vue-blog-itp2"]
+	path = vue-blog-itp2
+	url = https://github.com/alexander-tampier/vue-blog-itp2
