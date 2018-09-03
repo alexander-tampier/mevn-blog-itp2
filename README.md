@@ -31,10 +31,10 @@ app.METHOD(PATH, HANDLER)
 
 Bedeutung:
 
-* *app* ist eine Instanz von express.
-* *METHOD* ist eine HTTP-Anforderungsmethode.
-* *PATH* ist ein Pfad auf dem Server.
-* *HANDLER* ist die Funktion, die ausgeführt wird, wenn die Weiterleitung abgeglichen wird.
+* **app** ist eine Instanz von express.
+* **METHOD** ist eine HTTP-Anforderungsmethode.
+* **PATH** ist ein Pfad auf dem Server.
+* **HANDLER** ist die Funktion, die ausgeführt wird, wenn die Weiterleitung abgeglichen wird.
 
 ### Vue.js
 
@@ -117,7 +117,16 @@ Für alle Projekte die größer werden als lediglich eine Landing-Page sollte ei
 ## Überblick der Dateien am Server
 
 * `.env` - Wird benutzt um die properties zu setzen für `MONGODB_USERNAME` und `MONGODB_PASSWORD` um eine Verbindung zur mLab mongoDB herzustellen. Alternativ kann `MONGODB_URI` auf `localhost:27017/my-collection` gesetzt werden um den Connector mit einer lokalen MongoDB zu verbinden.
-* `.eslintrc.js` -
+* `.eslintrc.js` - ESLint ist ein statisches Code-Analyse-Tool dass von den meisten Entwicklern verwendet wird um den JavaScript source code auf kompatible Regeln zu überprüfen.
+* `.gitignore` - Wird verwendet um generierte Dateien nicht am Github-Repository zu hosten.
+* `tern-project` - Tern ist eine stand-alone Code-Analyse Umgebung für JavaScript. Es wird verwendet um intelligentes JavaScript editing zu aktiveren in einer belibiegen Entwicklungsumgebung.
+* `app.js` - In der app.js Datei werden alle wichtigen Abhängigkeiten deklariert und der Server wird auf einem bestimmten Port gestartet.
+* `package.json` - Deklariert alle Dependencies im Projekt
+* `bin/` - Der Entwurf einer Response eines einzelnen Blog-Feed
+* `config/` - Eigens konfigurierte logger
+* `model/` - Schema für die Datenbank wird erstellt
+* `routes/` - Definiert alle Endpoints
+
 
 ## Filestruktur am Client
 
@@ -214,7 +223,15 @@ Für alle Projekte die größer werden als lediglich eine Landing-Page sollte ei
 
 ## Überblick der Dateien am Client
 
-* `babelrc`
+* `babelrc` - Kompatibilität für ältere Browser
+* `build/` - Webpack build folder um das Projekt zu bundlen
+* `config/` - Alle config files für die einzelnen Umgebungen wie `dev`, `test` und `prod`
+* `docs/` - Static Assets für das Deployment am Netlify-CDN
+* `helper` - Interne JavaScript-Funktionen um den Title und den Content eines Posts zu truncaten.
+* `src/` - Der eigentliche Source-Code des Projekts für den Blog-feed
+  * `components/` - Widerverwendbare Komponenten wie z.B ein einzelner Blog-Post oder die Navigationsbar für das frontend
+  * `router/` - Internes Router-Linking für die einzelnen Routes der Webapplikation
+  * `services/` - `REST` Calls zum `Node.js` Backend um alle BlogPosts zu erhalten oder lediglich einen einzelnen
 
 ## Live Demo
 
